@@ -1,18 +1,4 @@
-/*
-  Copyright (C) 2016 Robinhood Markets, Inc.
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- */
 
 package com.applabs.animationapp.ticker;
 
@@ -41,24 +27,6 @@ import android.view.animation.Interpolator;
 
 import com.applabs.animationapp.R;
 
-/**
- * The primary view for showing a ticker text view that handles smoothly scrolling from the
- * current text to a given text. The scrolling behavior is defined by
- * {@link #setCharacterLists} which dictates what characters come in between the starting
- * and ending characters.
- *
- * <p>This class primarily handles the drawing customization of the ticker view, for example
- * setting animation duration, interpolator, colors, etc. It ensures that the canvas is properly
- * positioned, and then it delegates the drawing of each column of text to
- * {@link TickerColumnManager}.
- *
- * <p>This class's API should behave similarly to that of a {@link android.widget.TextView}.
- * However, I chose to extend from {@link View} instead of {@link android.widget.TextView}
- * because it allows me full flexibility in customizing the drawing and also support different
- * customization attributes as they are implemented.
- *
- * @author Jin Cao, Robinhood
- */
 public class TickerView extends View {
 
     public enum ScrollingDirection {
